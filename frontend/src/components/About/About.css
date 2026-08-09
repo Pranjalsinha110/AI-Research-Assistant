@@ -1,0 +1,1832 @@
+/* =========================================================
+                    ABOUT SECTION
+========================================================= */
+
+.about-section {
+
+    position: relative;
+
+    padding: 120px 0 110px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+                    BACKGROUND GLOWS
+========================================================= */
+
+.about-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(40px);
+
+    z-index: 0;
+
+}
+
+.about-glow-one {
+
+    width: 520px;
+
+    height: 520px;
+
+    top: 5%;
+
+    left: -300px;
+
+    background: radial-gradient(
+        circle,
+        rgba(37, 99, 235, 0.16),
+        transparent 70%
+    );
+
+    animation: aboutGlowMoveOne 10s ease-in-out infinite;
+
+}
+
+.about-glow-two {
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -280px;
+
+    bottom: 5%;
+
+    background: radial-gradient(
+        circle,
+        rgba(124, 58, 237, 0.15),
+        transparent 70%
+    );
+
+    animation: aboutGlowMoveTwo 12s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+                    HEADER
+========================================================= */
+
+.about-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 780px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+                    BADGE
+========================================================= */
+
+.about-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.6rem 1rem;
+
+    margin-bottom: 1.1rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50px;
+
+    background: var(--color-surface);
+
+    color: var(--color-primary);
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.05);
+
+}
+
+.about-badge i {
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+                    TITLE
+========================================================= */
+
+.about-title {
+
+    margin: 0 0 1rem;
+
+    color: var(--color-heading);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(2.3rem, 4.5vw, 3.5rem);
+
+    line-height: 1.15;
+
+    font-weight: 750;
+
+}
+
+.about-title span {
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent)
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+
+/* =========================================================
+                    SUBTITLE
+========================================================= */
+
+.about-subtitle {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+                    PROJECT SHOWCASE
+========================================================= */
+
+.about-showcase {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(100%, 850px);
+
+    height: 430px;
+
+    margin: 0 auto 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 32px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(37, 99, 235, 0.08),
+            transparent 42%
+        ),
+        var(--color-surface);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+                    ORBITS
+========================================================= */
+
+.showcase-orbit {
+
+    position: absolute;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+.orbit-one {
+
+    width: 330px;
+
+    height: 330px;
+
+    animation: orbitRotateOne 18s linear infinite;
+
+}
+
+.orbit-two {
+
+    width: 500px;
+
+    height: 500px;
+
+    border-style: dashed;
+
+    opacity: 0.55;
+
+    animation: orbitRotateTwo 25s linear infinite reverse;
+
+}
+
+
+/* =========================================================
+                    CENTER
+========================================================= */
+
+.showcase-center {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 270px;
+
+    text-align: center;
+
+    padding: 1.5rem;
+
+}
+
+.showcase-icon {
+
+    width: 76px;
+
+    height: 76px;
+
+    margin: 0 auto 1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.15),
+            rgba(124, 58, 237, 0.15)
+        );
+
+    color: var(--color-primary);
+
+    box-shadow:
+        0 0 35px rgba(37, 99, 235, 0.12);
+
+    animation: brainFloat 4s ease-in-out infinite;
+
+}
+
+.showcase-icon i {
+
+    font-size: 2.4rem;
+
+}
+
+.showcase-center > span {
+
+    display: block;
+
+    margin-bottom: 0.45rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+}
+
+.showcase-center h3 {
+
+    margin: 0 0 0.75rem;
+
+    color: var(--color-heading);
+
+    font-size: 1.45rem;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+}
+
+.showcase-center p {
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.78rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* =========================================================
+                    FLOATING TECH CARDS
+========================================================= */
+
+.floating-tech {
+
+    position: absolute;
+
+    z-index: 6;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    padding: 0.65rem 0.9rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text);
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+.floating-tech i {
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+
+}
+
+
+/* Individual positions */
+
+.tech-one {
+
+    top: 18%;
+
+    left: 11%;
+
+    animation: floatingTechOne 5s ease-in-out infinite;
+
+}
+
+.tech-two {
+
+    top: 18%;
+
+    right: 11%;
+
+    animation: floatingTechTwo 6s ease-in-out infinite;
+
+}
+
+.tech-three {
+
+    bottom: 17%;
+
+    left: 15%;
+
+    animation: floatingTechThree 5.5s ease-in-out infinite;
+
+}
+
+.tech-four {
+
+    bottom: 17%;
+
+    right: 14%;
+
+    animation: floatingTechFour 6.5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+                    STATS
+========================================================= */
+
+.about-stats {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-bottom: 70px;
+
+}
+
+.about-stats > div {
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* =========================================================
+                    STAT CARD
+========================================================= */
+
+.stat-card {
+
+    position: relative;
+
+    height: 100%;
+
+    min-height: 225px;
+
+    padding: 1.8rem 1.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 22px;
+
+    background: var(--color-surface);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+.stat-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    top: -80px;
+
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(37, 99, 235, 0.15),
+        transparent 70%
+    );
+
+    transition: transform 0.5s ease;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(37, 99, 235, 0.3);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.1),
+        0 0 30px rgba(37, 99, 235, 0.06);
+
+}
+
+.stat-card:hover::before {
+
+    transform: scale(1.5);
+
+}
+
+
+/* =========================================================
+                    STAT ICON
+========================================================= */
+
+.stat-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    margin-bottom: 0.9rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.12),
+            rgba(124, 58, 237, 0.1)
+        );
+
+    color: var(--color-primary);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+
+}
+
+.stat-card:hover .stat-icon {
+
+    transform: rotate(-8deg) scale(1.08);
+
+}
+
+.stat-icon i {
+
+    font-size: 1.45rem;
+
+}
+
+
+/* =========================================================
+                    STAT NUMBER
+========================================================= */
+
+.stat-number {
+
+    margin-bottom: 0.2rem;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+}
+
+.stat-card h4 {
+
+    margin: 0 0 0.35rem;
+
+    color: var(--color-heading);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+}
+
+.stat-card p {
+
+    max-width: 220px;
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.72rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+                    DEVELOPER SHOWCASE
+========================================================= */
+
+.developer-showcase {
+
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 3rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.05),
+            rgba(124, 58, 237, 0.05)
+        ),
+        var(--color-surface);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow: hidden;
+
+}
+
+.developer-showcase::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    top: -160px;
+
+    right: -120px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(6, 182, 212, 0.14),
+        transparent 70%
+    );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+                    DEVELOPER VISUAL
+========================================================= */
+
+.developer-visual {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.developer-orbit {
+
+    position: relative;
+
+    width: 190px;
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px dashed var(--color-border);
+
+    border-radius: 50%;
+
+    animation: developerOrbit 18s linear infinite;
+
+}
+
+.developer-orbit::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 145px;
+
+    height: 145px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+}
+
+.developer-avatar-large {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(37, 99, 235, 0.25);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.16),
+            rgba(124, 58, 237, 0.16)
+        );
+
+    color: var(--color-primary);
+
+    box-shadow:
+        0 0 40px rgba(37, 99, 235, 0.12);
+
+    animation: developerAvatarFloat 4s ease-in-out infinite;
+
+}
+
+.developer-avatar-large i {
+
+    font-size: 3rem;
+
+}
+
+
+/* =========================================================
+                    DEVELOPER INFO
+========================================================= */
+
+.developer-info {
+
+    padding-left: 2rem;
+
+}
+
+.developer-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    margin-bottom: 0.7rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+}
+
+.developer-label i {
+
+    font-size: 0.95rem;
+
+}
+
+.developer-info h3 {
+
+    margin: 0 0 0.45rem;
+
+    color: var(--color-heading);
+
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+
+    font-weight: 750;
+
+}
+
+.developer-info h3 span {
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+.developer-info h4 {
+
+    margin: 0 0 1rem;
+
+    color: var(--color-text);
+
+    font-size: 0.92rem;
+
+    font-weight: 600;
+
+}
+
+.developer-info h4 span {
+
+    color: var(--color-primary);
+
+}
+
+.developer-info > p {
+
+    max-width: 620px;
+
+    margin: 0 0 1.25rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.86rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+                    TECHNOLOGIES
+========================================================= */
+
+.technology-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.55rem;
+
+    margin-bottom: 1.3rem;
+
+}
+
+.technology-pill {
+
+    padding: 0.42rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text-muted);
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+.technology-pill:hover {
+
+    transform: translateY(-3px);
+
+    color: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+}
+
+
+/* =========================================================
+                    QUOTE
+========================================================= */
+
+.developer-quote {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.74rem;
+
+    font-style: italic;
+
+}
+
+.developer-quote i {
+
+    color: var(--color-secondary);
+
+    font-size: 1.1rem;
+
+}
+
+
+/* =========================================================
+                    BOTTOM
+========================================================= */
+
+.about-bottom {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin-top: 45px;
+
+    text-align: center;
+
+}
+
+.about-bottom span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.72rem;
+
+}
+
+.about-bottom i {
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+                    ANIMATIONS
+========================================================= */
+
+@keyframes aboutGlowMoveOne {
+
+    0%,
+    100% {
+
+        transform: translate(0, 0);
+
+    }
+
+    50% {
+
+        transform: translate(80px, 60px);
+
+    }
+
+}
+
+@keyframes aboutGlowMoveTwo {
+
+    0%,
+    100% {
+
+        transform: translate(0, 0);
+
+    }
+
+    50% {
+
+        transform: translate(-70px, -50px);
+
+    }
+
+}
+
+@keyframes orbitRotateOne {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes orbitRotateTwo {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes brainFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+}
+
+@keyframes floatingTechOne {
+
+    0%,
+    100% {
+
+        transform: translateY(0) rotate(-2deg);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px) rotate(2deg);
+
+    }
+
+}
+
+@keyframes floatingTechTwo {
+
+    0%,
+    100% {
+
+        transform: translateY(0) rotate(2deg);
+
+    }
+
+    50% {
+
+        transform: translateY(10px) rotate(-2deg);
+
+    }
+
+}
+
+@keyframes floatingTechThree {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+@keyframes floatingTechFour {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(12px);
+
+    }
+
+}
+
+@keyframes developerOrbit {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes developerAvatarFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-7px);
+
+    }
+
+}
+
+
+/* =========================================================
+                    TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .about-section {
+
+        padding: 100px 0;
+
+    }
+
+    .about-showcase {
+
+        height: 410px;
+
+    }
+
+    .tech-one {
+
+        left: 7%;
+
+    }
+
+    .tech-two {
+
+        right: 7%;
+
+    }
+
+    .tech-three {
+
+        left: 8%;
+
+    }
+
+    .tech-four {
+
+        right: 8%;
+
+    }
+
+    .developer-showcase {
+
+        padding: 2.5rem;
+
+    }
+
+    .developer-info {
+
+        padding-left: 1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+                    MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-section {
+
+        padding: 85px 0;
+
+    }
+
+    .about-header {
+
+        margin-bottom: 40px;
+
+    }
+
+    .about-title {
+
+        font-size: 2.35rem;
+
+    }
+
+    .about-subtitle {
+
+        padding: 0 0.75rem;
+
+        font-size: 0.86rem;
+
+    }
+
+
+    /* Showcase */
+
+    .about-showcase {
+
+        height: 390px;
+
+        margin-bottom: 55px;
+
+        border-radius: 25px;
+
+    }
+
+    .orbit-one {
+
+        width: 260px;
+
+        height: 260px;
+
+    }
+
+    .orbit-two {
+
+        width: 370px;
+
+        height: 370px;
+
+    }
+
+    .showcase-center {
+
+        width: 245px;
+
+    }
+
+    .showcase-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+    .showcase-icon i {
+
+        font-size: 2rem;
+
+    }
+
+    .showcase-center h3 {
+
+        font-size: 1.25rem;
+
+    }
+
+    .showcase-center p {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    /* Floating tech */
+
+    .floating-tech {
+
+        padding: 0.5rem 0.7rem;
+
+        font-size: 0.63rem;
+
+    }
+
+    .floating-tech i {
+
+        font-size: 0.85rem;
+
+    }
+
+    .tech-one {
+
+        top: 9%;
+
+        left: 6%;
+
+    }
+
+    .tech-two {
+
+        top: 9%;
+
+        right: 6%;
+
+    }
+
+    .tech-three {
+
+        bottom: 9%;
+
+        left: 7%;
+
+    }
+
+    .tech-four {
+
+        bottom: 9%;
+
+        right: 7%;
+
+    }
+
+
+    /* Stats */
+
+    .about-stats {
+
+        margin-bottom: 45px;
+
+    }
+
+    .stat-card {
+
+        min-height: 200px;
+
+    }
+
+
+    /* Developer */
+
+    .developer-showcase {
+
+        padding: 2rem 1.5rem;
+
+        border-radius: 25px;
+
+    }
+
+    .developer-visual {
+
+        margin-bottom: 2rem;
+
+    }
+
+    .developer-info {
+
+        padding-left: 0;
+
+        text-align: center;
+
+    }
+
+    .developer-info > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .technology-list {
+
+        justify-content: center;
+
+    }
+
+    .developer-quote {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =========================================================
+                    SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .about-section {
+
+        padding: 75px 0;
+
+    }
+
+    .about-badge {
+
+        font-size: 0.74rem;
+
+        padding: 0.5rem 0.8rem;
+
+    }
+
+    .about-title {
+
+        font-size: 2rem;
+
+    }
+
+    .about-subtitle {
+
+        font-size: 0.8rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* Showcase */
+
+    .about-showcase {
+
+        height: 350px;
+
+        border-radius: 22px;
+
+    }
+
+    .orbit-one {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+    .orbit-two {
+
+        width: 315px;
+
+        height: 315px;
+
+    }
+
+    .showcase-center {
+
+        width: 220px;
+
+        padding: 1rem;
+
+    }
+
+    .showcase-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+        margin-bottom: 0.8rem;
+
+        border-radius: 17px;
+
+    }
+
+    .showcase-icon i {
+
+        font-size: 1.8rem;
+
+    }
+
+    .showcase-center > span {
+
+        font-size: 0.58rem;
+
+    }
+
+    .showcase-center h3 {
+
+        font-size: 1.1rem;
+
+    }
+
+    .showcase-center p {
+
+        font-size: 0.66rem;
+
+    }
+
+
+    /* Floating elements */
+
+    .floating-tech {
+
+        padding: 0.42rem 0.6rem;
+
+        font-size: 0.56rem;
+
+    }
+
+    .floating-tech i {
+
+        font-size: 0.75rem;
+
+    }
+
+    .tech-one {
+
+        top: 7%;
+
+        left: 4%;
+
+    }
+
+    .tech-two {
+
+        top: 7%;
+
+        right: 4%;
+
+    }
+
+    .tech-three {
+
+        bottom: 7%;
+
+        left: 4%;
+
+    }
+
+    .tech-four {
+
+        bottom: 7%;
+
+        right: 4%;
+
+    }
+
+
+    /* Stats */
+
+    .stat-card {
+
+        min-height: 185px;
+
+        padding: 1.5rem 1rem;
+
+        border-radius: 19px;
+
+    }
+
+    .stat-icon {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+    .stat-icon i {
+
+        font-size: 1.2rem;
+
+    }
+
+    .stat-number {
+
+        font-size: 2.15rem;
+
+    }
+
+    .stat-card h4 {
+
+        font-size: 0.88rem;
+
+    }
+
+    .stat-card p {
+
+        font-size: 0.68rem;
+
+    }
+
+
+    /* Developer */
+
+    .developer-showcase {
+
+        padding: 1.7rem 1rem;
+
+        border-radius: 22px;
+
+    }
+
+    .developer-orbit {
+
+        width: 160px;
+
+        height: 160px;
+
+    }
+
+    .developer-orbit::before {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+    .developer-avatar-large {
+
+        width: 82px;
+
+        height: 82px;
+
+        border-radius: 23px;
+
+    }
+
+    .developer-avatar-large i {
+
+        font-size: 2.4rem;
+
+    }
+
+    .developer-info h3 {
+
+        font-size: 1.65rem;
+
+    }
+
+    .developer-info h4 {
+
+        font-size: 0.78rem;
+
+    }
+
+    .developer-info > p {
+
+        font-size: 0.76rem;
+
+        line-height: 1.7;
+
+    }
+
+    .technology-pill {
+
+        padding: 0.36rem 0.6rem;
+
+        font-size: 0.61rem;
+
+    }
+
+    .developer-quote {
+
+        font-size: 0.68rem;
+
+    }
+
+    .about-bottom {
+
+        margin-top: 35px;
+
+    }
+
+    .about-bottom span {
+
+        font-size: 0.64rem;
+
+    }
+
+}
+
+
+/* =========================================================
+                    REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-glow-one,
+    .about-glow-two,
+    .showcase-orbit,
+    .showcase-icon,
+    .floating-tech,
+    .developer-orbit,
+    .developer-avatar-large {
+
+        animation: none;
+
+    }
+
+    .stat-card,
+    .stat-icon,
+    .technology-pill {
+
+        transition: none;
+
+    }
+
+}

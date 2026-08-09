@@ -1,0 +1,1054 @@
+/* 
+                    PLANNER SECTION
+ */
+
+.planner-section {
+
+    position: relative;
+
+    padding: 110px 0 120px;
+
+    overflow: hidden;
+
+}
+
+
+/* 
+                    BACKGROUND GLOW
+*/
+
+.planner-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    top: 5%;
+
+    left: -220px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(37, 99, 235, 0.14),
+        transparent 70%
+    );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+}
+
+.planner-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    right: -200px;
+
+    bottom: 5%;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(124, 58, 237, 0.14),
+        transparent 70%
+    );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+}
+
+
+/* 
+                    HEADER
+ */
+
+.planner-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 3.5rem;
+
+}
+
+
+/* 
+                    BADGE
+ */
+
+.planner-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.55rem 1rem;
+
+    margin-bottom: 1.2rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50px;
+
+    background: var(--color-surface);
+
+    color: var(--color-primary);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+}
+
+.planner-badge i {
+
+    font-size: 1.05rem;
+
+}
+
+
+/* 
+                    TITLE
+ */
+
+.planner-title {
+
+    margin: 0 0 1rem;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    color: var(--color-heading);
+
+}
+
+.planner-title span {
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent)
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+
+/* 
+                    DESCRIPTION
+*/
+
+.planner-description {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* 
+                    MAIN PLANNER CARD
+ */
+
+.planner-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 2rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 28px;
+
+    background: var(--color-surface);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow: var(--shadow-lg);
+
+    overflow: hidden;
+
+}
+
+
+/* 
+                    CARD TOP GLOW
+ */
+
+.planner-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary),
+        var(--color-secondary),
+        transparent
+    );
+
+    opacity: 0.8;
+
+}
+
+
+/*
+                    CARD HEADER
+ */
+
+.planner-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding-bottom: 1.7rem;
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+
+/* 
+                    CARD ICON
+ */
+
+.planner-card-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    color: #fff;
+
+    box-shadow: var(--shadow-glow);
+
+}
+
+.planner-card-icon i {
+
+    font-size: 1.65rem;
+
+}
+
+
+/* 
+                    CARD HEADER TEXT
+ */
+
+.planner-card-header h3 {
+
+    margin: 0;
+
+    color: var(--color-heading);
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+}
+
+.planner-card-header p {
+
+    margin: 0.25rem 0 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.85rem;
+
+}
+
+
+/* 
+                    STATUS
+ */
+
+.planner-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    margin-left: auto;
+
+    padding: 0.45rem 0.8rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50px;
+
+    background: var(--color-surface);
+
+    color: var(--color-success);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+}
+
+.status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--color-success);
+
+    box-shadow: 0 0 10px var(--color-success);
+
+    animation: plannerPulse 2s infinite;
+
+}
+
+
+/* 
+                    PLANNER STEPS
+ */
+
+.planner-steps {
+
+    position: relative;
+
+    padding: 2rem 0 1rem;
+
+}
+
+
+/* 
+                    INDIVIDUAL STEP
+ */
+
+.planner-step {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 55px 58px 1fr 38px;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    min-height: 105px;
+
+    padding: 0.8rem 0;
+
+}
+
+
+/* 
+                    STEP NUMBER
+*/
+
+.step-number {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+}
+
+
+/* 
+                    STEP ICON
+ */
+
+.step-icon {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 15px;
+
+    background: var(--color-background);
+
+    color: var(--color-primary);
+
+    transition: all 0.3s ease;
+
+}
+
+.step-icon i {
+
+    font-size: 1.35rem;
+
+}
+
+
+/* 
+                    STEP CONNECTOR
+ */
+
+.step-connector {
+
+    position: absolute;
+
+    left: 83px;
+
+    top: 63px;
+
+    width: 1px;
+
+    height: 62px;
+
+    background: linear-gradient(
+        180deg,
+        var(--color-primary),
+        var(--color-border)
+    );
+
+    opacity: 0.7;
+
+}
+
+
+/*
+                    STEP CONTENT
+ */
+
+.step-content {
+
+    padding: 0.5rem 0;
+
+}
+
+.step-content h4 {
+
+    margin: 0 0 0.35rem;
+
+    color: var(--color-heading);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+
+}
+
+.step-content p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+}
+
+
+/*
+                    STEP CHECK
+ */
+
+.step-check {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(34, 197, 94, 0.25);
+
+    border-radius: 50%;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    color: var(--color-success);
+
+}
+
+.step-check i {
+
+    font-size: 1rem;
+
+}
+
+
+/* 
+                    STEP HOVER
+ */
+
+.planner-step:hover .step-icon {
+
+    border-color: var(--color-primary);
+
+    color: var(--color-primary);
+
+    background: var(--color-surface);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+
+}
+
+.planner-step:hover .step-content h4 {
+
+    color: var(--color-primary);
+
+}
+
+.planner-step:hover .step-check {
+
+    transform: scale(1.08);
+
+}
+
+
+/* 
+                    FOOTER
+ */
+
+.planner-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1.5rem;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+
+/* 
+                    INFO
+*/
+
+.planner-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.55rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.82rem;
+
+}
+
+.planner-info i {
+
+    color: var(--color-accent);
+
+    font-size: 1.1rem;
+
+}
+
+
+/* 
+                    EXECUTE BUTTON
+ */
+
+.planner-start-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.55rem;
+
+    flex-shrink: 0;
+
+    padding: 0.8rem 1.35rem;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    color: #fff;
+
+    font-family: var(--font-body);
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+
+}
+
+.planner-start-btn i {
+
+    font-size: 1.1rem;
+
+}
+
+.planner-start-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-glow);
+
+}
+
+
+/* 
+                    ANIMATIONS
+ */
+
+@keyframes plannerPulse {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.35);
+
+        opacity: 0.6;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/*
+                    TABLET
+ */
+
+@media (max-width: 992px) {
+
+    .planner-section {
+
+        padding: 90px 0 100px;
+
+    }
+
+    .planner-card {
+
+        padding: 1.7rem;
+
+    }
+
+    .planner-step {
+
+        grid-template-columns: 45px 52px 1fr 35px;
+
+        gap: 0.8rem;
+
+    }
+
+    .step-connector {
+
+        left: 70px;
+
+    }
+
+}
+
+
+/* 
+                    MOBILE
+ */
+
+@media (max-width: 768px) {
+
+    .planner-section {
+
+        padding: 80px 0;
+
+    }
+
+    .planner-header {
+
+        margin-bottom: 2.5rem;
+
+    }
+
+    .planner-title {
+
+        font-size: 2.25rem;
+
+    }
+
+    .planner-description {
+
+        font-size: 0.92rem;
+
+    }
+
+    .planner-card {
+
+        padding: 1.3rem;
+
+        border-radius: 22px;
+
+    }
+
+    .planner-card-header {
+
+        flex-wrap: wrap;
+
+    }
+
+    .planner-status {
+
+        margin-left: auto;
+
+    }
+
+    .planner-step {
+
+        grid-template-columns: 38px 48px 1fr;
+
+        gap: 0.7rem;
+
+        min-height: 100px;
+
+    }
+
+    .step-number {
+
+        font-size: 0.72rem;
+
+    }
+
+    .step-icon {
+
+        width: 44px;
+
+        height: 44px;
+
+        border-radius: 13px;
+
+    }
+
+    .step-icon i {
+
+        font-size: 1.2rem;
+
+    }
+
+    .step-connector {
+
+        left: 61px;
+
+        top: 58px;
+
+        height: 58px;
+
+    }
+
+    .step-content h4 {
+
+        font-size: 0.95rem;
+
+    }
+
+    .step-content p {
+
+        font-size: 0.82rem;
+
+    }
+
+    .step-check {
+
+        display: none;
+
+    }
+
+    .planner-footer {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .planner-info {
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+    .planner-start-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* 
+                    SMALL MOBILE
+ */
+
+@media (max-width: 576px) {
+
+    .planner-section {
+
+        padding: 70px 0;
+
+    }
+
+    .planner-title {
+
+        font-size: 1.95rem;
+
+    }
+
+    .planner-badge {
+
+        font-size: 0.78rem;
+
+        padding: 0.5rem 0.8rem;
+
+    }
+
+    .planner-card {
+
+        padding: 1rem;
+
+        border-radius: 20px;
+
+    }
+
+    .planner-card-header {
+
+        gap: 0.75rem;
+
+    }
+
+    .planner-card-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        border-radius: 14px;
+
+    }
+
+    .planner-card-icon i {
+
+        font-size: 1.4rem;
+
+    }
+
+    .planner-card-header h3 {
+
+        font-size: 1rem;
+
+    }
+
+    .planner-card-header p {
+
+        font-size: 0.76rem;
+
+    }
+
+    .planner-status {
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-left: 0;
+
+    }
+
+    .planner-steps {
+
+        padding-top: 1.5rem;
+
+    }
+
+    .planner-step {
+
+        grid-template-columns: 30px 42px 1fr;
+
+        gap: 0.55rem;
+
+        min-height: 105px;
+
+    }
+
+    .step-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+    .step-connector {
+
+        left: 50px;
+
+    }
+
+    .step-content h4 {
+
+        font-size: 0.9rem;
+
+    }
+
+    .step-content p {
+
+        font-size: 0.78rem;
+
+        line-height: 1.55;
+
+    }
+
+    .planner-info {
+
+        font-size: 0.76rem;
+
+    }
+
+}

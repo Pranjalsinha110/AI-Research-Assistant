@@ -1,0 +1,995 @@
+/* =========================================================
+                    TOOL RESULTS SECTION
+========================================================= */
+
+.tool-results-section {
+
+    position: relative;
+
+    padding: 110px 0 120px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+                    BACKGROUND GLOW
+========================================================= */
+
+.tool-results-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    top: 5%;
+
+    right: -220px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(6, 182, 212, 0.14),
+        transparent 70%
+    );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+
+}
+
+.tool-results-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    bottom: 0;
+
+    left: -220px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(124, 58, 237, 0.13),
+        transparent 70%
+    );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+                    HEADER
+========================================================= */
+
+.tool-results-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin: 0 auto 3.5rem;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+                    BADGE
+========================================================= */
+
+.tool-results-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+    padding: 0.55rem 1rem;
+
+    margin-bottom: 1.2rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50px;
+
+    background: var(--color-surface);
+
+    color: var(--color-accent);
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+}
+
+.tool-results-badge i {
+
+    font-size: 1.05rem;
+
+}
+
+
+/* =========================================================
+                    TITLE
+========================================================= */
+
+.tool-results-title {
+
+    margin: 0 0 1rem;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(2.2rem, 4vw, 3.25rem);
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    color: var(--color-heading);
+
+}
+
+.tool-results-title span {
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent)
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+}
+
+
+/* =========================================================
+                    DESCRIPTION
+========================================================= */
+
+.tool-results-description {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+                    TOOL GRID
+========================================================= */
+
+.tool-results-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+                    TOOL CARD
+========================================================= */
+
+.tool-result-card {
+
+    position: relative;
+
+    height: 320px;
+
+    min-height: 320px;
+
+    padding: 1.6rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 24px;
+
+    background: var(--color-surface);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: var(--shadow-lg);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+.tool-result-scroll {
+
+    flex: 1;
+
+    min-height: 0;
+
+    margin-top: 0.5rem;
+
+    padding-right: 0.6rem;
+
+    overflow-y: auto;
+
+}
+
+/* =========================================================
+                    CARD TOP GLOW
+========================================================= */
+
+.tool-result-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 12%;
+
+    width: 76%;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary),
+        var(--color-accent),
+        transparent
+    );
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================================================
+                    CARD HOVER GLOW
+========================================================= */
+
+.tool-result-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    top: -100px;
+
+    right: -90px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(37, 99, 235, 0.16),
+        transparent 70%
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+
+    pointer-events: none;
+
+}
+
+.tool-result-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(37, 99, 235, 0.35);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12),
+        0 0 30px rgba(37, 99, 235, 0.08);
+
+}
+
+.tool-result-card:hover::after {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+                    CARD TOP
+========================================================= */
+
+.tool-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* =========================================================
+                    TOOL ICON
+========================================================= */
+
+.tool-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 17px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(37, 99, 235, 0.16),
+        rgba(124, 58, 237, 0.16)
+    );
+
+    color: var(--color-primary);
+
+    transition: all 0.35s ease;
+
+}
+
+.tool-icon i {
+
+    font-size: 1.65rem;
+
+}
+
+.tool-result-card:hover .tool-icon {
+
+    transform: translateY(-3px) scale(1.04);
+
+    border-color: var(--color-primary);
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.15);
+
+}
+
+
+/* =========================================================
+                    STATUS
+========================================================= */
+
+.tool-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    padding: 0.4rem 0.7rem;
+
+    border: 1px solid rgba(34, 197, 94, 0.2);
+
+    border-radius: 50px;
+
+    background: rgba(34, 197, 94, 0.07);
+
+    color: var(--color-success);
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+.tool-status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--color-success);
+
+    box-shadow: 0 0 9px var(--color-success);
+
+    animation: toolStatusPulse 2s infinite;
+
+}
+
+
+/* =========================================================
+                    CARD CONTENT
+========================================================= */
+
+.tool-card-content {
+
+    flex: 1;
+
+}
+
+.tool-card-content h3 {
+
+    margin: 0 0 0.65rem;
+
+    color: var(--color-heading);
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+
+}
+
+.tool-card-content p {
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.87rem;
+
+    line-height: 1.7;
+
+}
+
+.tool-result-card:hover .tool-card-content h3 {
+
+    color: var(--color-primary);
+
+}
+
+
+/* =========================================================
+                    CARD FOOTER
+========================================================= */
+
+.tool-card-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 1.5rem;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--color-border);
+
+}
+
+
+/* =========================================================
+                    SOURCE COUNT
+========================================================= */
+
+.tool-count {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+}
+
+.tool-count i {
+
+    color: var(--color-accent);
+
+    font-size: 1rem;
+
+}
+
+
+/* =========================================================
+                    CHECK ICON
+========================================================= */
+
+.tool-check {
+
+    color: var(--color-success);
+
+    font-size: 1.25rem;
+
+}
+
+
+/* =========================================================
+                    SUMMARY CARD
+========================================================= */
+
+.tool-summary {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1100px;
+
+    margin: 2rem auto 0;
+
+    padding: 1.4rem 1.5rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 20px;
+
+    background: var(--color-surface);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+.tool-summary:hover {
+
+    transform: translateY(-3px);
+
+    border-color: rgba(6, 182, 212, 0.3);
+
+}
+
+
+/* =========================================================
+                    SUMMARY ICON
+========================================================= */
+
+.tool-summary-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    color: var(--color-success);
+
+}
+
+.tool-summary-icon i {
+
+    font-size: 1.4rem;
+
+}
+
+
+/* =========================================================
+                    SUMMARY CONTENT
+========================================================= */
+
+.tool-summary-content {
+
+    flex: 1;
+
+}
+
+.tool-summary-content h4 {
+
+    margin: 0 0 0.25rem;
+
+    color: var(--color-heading);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+}
+
+.tool-summary-content p {
+
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.8rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+                    SUMMARY ARROW
+========================================================= */
+
+.tool-summary-arrow {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 50%;
+
+    color: var(--color-primary);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+.tool-summary:hover .tool-summary-arrow {
+
+    transform: translateX(4px);
+
+    background: var(--color-surface);
+
+}
+
+.tool-summary-arrow i {
+
+    font-size: 1.15rem;
+
+}
+
+
+/* =========================================================
+                    ANIMATION
+========================================================= */
+
+@keyframes toolStatusPulse {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.35);
+
+        opacity: 0.55;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================================
+                    TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .tool-results-section {
+
+        padding: 90px 0 100px;
+
+    }
+
+    .tool-results-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 760px;
+
+    }
+
+    .tool-result-card:last-child {
+
+        grid-column: 1 / -1;
+
+        max-width: calc(50% - 0.75rem);
+
+        width: 100%;
+
+        justify-self: center;
+
+    }
+
+}
+
+
+/* =========================================================
+                    MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .tool-results-section {
+
+        padding: 80px 0;
+
+    }
+
+    .tool-results-header {
+
+        margin-bottom: 2.5rem;
+
+    }
+
+    .tool-results-title {
+
+        font-size: 2.25rem;
+
+    }
+
+    .tool-results-description {
+
+        font-size: 0.92rem;
+
+    }
+
+    .tool-results-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 520px;
+
+    }
+
+    .tool-result-card:last-child {
+
+        grid-column: auto;
+
+        max-width: none;
+
+    }
+
+    .tool-result-card {
+
+        min-height: 265px;
+
+        padding: 1.4rem;
+
+    }
+
+    .tool-summary {
+
+        align-items: flex-start;
+
+        padding: 1.2rem;
+
+    }
+
+}
+
+
+/* =========================================================
+                    SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .tool-results-section {
+
+        padding: 70px 0;
+
+    }
+
+    .tool-results-title {
+
+        font-size: 1.95rem;
+
+    }
+
+    .tool-results-badge {
+
+        padding: 0.5rem 0.8rem;
+
+        font-size: 0.78rem;
+
+    }
+
+    .tool-results-description {
+
+        font-size: 0.85rem;
+
+        line-height: 1.7;
+
+    }
+
+    .tool-result-card {
+
+        min-height: 250px;
+
+        padding: 1.15rem;
+
+        border-radius: 20px;
+
+    }
+
+    .tool-card-top {
+
+        margin-bottom: 1.25rem;
+
+    }
+
+    .tool-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        border-radius: 14px;
+
+    }
+
+    .tool-icon i {
+
+        font-size: 1.4rem;
+
+    }
+
+    .tool-status {
+
+        padding: 0.35rem 0.6rem;
+
+        font-size: 0.68rem;
+
+    }
+
+    .tool-card-content h3 {
+
+        font-size: 1.05rem;
+
+    }
+
+    .tool-card-content p {
+
+        font-size: 0.81rem;
+
+    }
+
+    .tool-summary {
+
+        gap: 0.75rem;
+
+        border-radius: 18px;
+
+    }
+
+    .tool-summary-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+    .tool-summary-icon i {
+
+        font-size: 1.2rem;
+
+    }
+
+    .tool-summary-content h4 {
+
+        font-size: 0.88rem;
+
+    }
+
+    .tool-summary-content p {
+
+        font-size: 0.74rem;
+
+    }
+
+    .tool-summary-arrow {
+
+        display: none;
+
+    }
+
+}

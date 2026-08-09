@@ -1,0 +1,725 @@
+/* 
+                    RESEARCH INPUT
+*/
+
+.research-input-section{
+
+    position:relative;
+
+    padding:110px 0 100px;
+
+    overflow:hidden;
+
+}
+/*
+                    MAIN WRAPPER
+*/
+.research-input-wrapper{
+
+    position:relative;
+
+    max-width:950px;
+
+    margin:0 auto;
+
+    padding:3rem;
+
+    border:1px solid var(--color-border);
+
+    border-radius:28px;
+
+    background:var(--color-surface);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    box-shadow:var(--shadow-md);
+
+}
+/* 
+                    BACKGROUND GLOW
+ */
+
+.research-input-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    top:-150px;
+
+    left:-150px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(37,99,235,.18),
+        transparent 70%
+    );
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+}
+
+.research-input-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    right:-140px;
+
+    bottom:-140px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(124,58,237,.16),
+        transparent 70%
+    );
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+}
+/*
+                    HEADER
+*/
+
+.research-input-header{
+
+    position:relative;
+
+    z-index:1;
+
+    text-align:center;
+
+    margin-bottom:2.5rem;
+
+}
+
+/* 
+                    BADGE
+*/
+
+.research-input-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.55rem 1rem;
+
+    margin-bottom:1.2rem;
+
+    border:1px solid var(--color-border);
+
+    border-radius:50px;
+
+    background:var(--color-surface);
+
+    color:var(--color-primary);
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+}
+
+.research-input-badge i{
+
+    font-size:1rem;
+
+}
+
+
+/* 
+                    TITLE
+ */
+
+.research-input-title{
+
+    margin:0 0 1rem;
+
+    font-family:var(--font-heading);
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    color:var(--color-heading);
+
+}
+
+.research-input-title span{
+
+    background:linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent)
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+
+/* 
+                    DESCRIPTION
+ */
+
+.research-input-description{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    color:var(--color-text-muted);
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+/*
+                    FORM
+ */
+
+.research-form{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* 
+                    TEXTAREA WRAPPER
+ */
+
+.research-textarea-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    padding:1rem;
+
+    border:1px solid var(--color-border);
+
+    border-radius:20px;
+
+    background:var(--color-background);
+
+    transition:all .3s ease;
+
+}
+
+.research-textarea-wrapper:focus-within{
+
+    border-color:var(--color-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,.12),
+        var(--shadow-sm);
+
+}
+
+
+/*
+                    SEARCH ICON
+ */
+
+.research-input-icon{
+
+    position:absolute;
+
+    top:1.25rem;
+
+    left:1.25rem;
+
+    font-size:1.35rem;
+
+    color:var(--color-primary);
+
+    pointer-events:none;
+
+}
+
+
+/* 
+                    TEXTAREA
+ */
+
+.research-textarea{
+
+    width:100%;
+
+    min-height:150px;
+
+    padding:.15rem 3rem .5rem 2.8rem;
+
+    border:none;
+
+    outline:none;
+
+    resize:vertical;
+
+    background:transparent;
+
+    color:var(--color-text);
+
+    font-family:var(--font-body);
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+
+.research-textarea::placeholder{
+
+    color:var(--color-text-muted);
+
+    opacity:.75;
+
+}
+
+.research-textarea:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.7;
+
+}
+
+
+/* 
+                    INPUT HINT
+ */
+
+.research-input-hint{
+
+    display:block;
+
+    margin-top:.3rem;
+
+    padding-left:2.8rem;
+
+    color:var(--color-text-muted);
+
+    font-size:.78rem;
+
+    opacity:.8;
+
+}
+
+
+/* 
+                    SUBMIT BUTTON
+ */
+
+.research-submit-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    width:100%;
+
+    margin-top:1rem;
+
+    padding:1rem 1.5rem;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    color:#fff;
+
+    font-family:var(--font-body);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:0 8px 25px rgba(37,99,235,.18);
+
+}
+
+.research-submit-btn i{
+
+    font-size:1.25rem;
+
+}
+
+.research-submit-btn:hover:not(:disabled){
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(37,99,235,.30),
+        var(--shadow-glow);
+
+}
+
+.research-submit-btn:active:not(:disabled){
+
+    transform:translateY(-1px);
+
+}
+
+.research-submit-btn:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+
+/* 
+                    LOADING SPINNER
+*/
+
+.research-spinner{
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-top-color:#fff;
+
+    border-radius:50%;
+
+    animation:researchSpin .8s linear infinite;
+
+}
+
+
+/* 
+                    EXAMPLES
+ */
+
+.research-examples{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:.7rem;
+
+    margin-top:1.5rem;
+
+}
+
+.examples-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.35rem;
+
+    color:var(--color-text-muted);
+
+    font-size:.85rem;
+
+}
+
+.examples-label i{
+
+    color:var(--color-warning);
+
+    font-size:1rem;
+
+}
+
+
+/* 
+                    EXAMPLE QUERY BUTTONS
+ */
+
+.example-query{
+
+    padding:.45rem .85rem;
+
+    border:1px solid var(--color-border);
+
+    border-radius:50px;
+
+    background:transparent;
+
+    color:var(--color-text-muted);
+
+    font-family:var(--font-body);
+
+    font-size:.8rem;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+}
+
+.example-query:hover{
+
+    border-color:var(--color-primary);
+
+    color:var(--color-primary);
+
+    background:var(--color-surface);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* 
+                    ANIMATION
+ */
+
+@keyframes researchSpin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*
+                    TABLET
+ */
+
+@media (max-width:992px){
+
+    .research-input-section{
+
+        padding:90px 0 80px;
+
+    }
+
+    .research-input-wrapper{
+
+        padding:2.5rem;
+
+    }
+
+}
+
+
+/*
+                    MOBILE
+ */
+
+@media (max-width:768px){
+
+    .research-input-section{
+
+        padding:80px 0 70px;
+
+    }
+
+    .research-input-wrapper{
+
+        padding:2rem 1.5rem;
+
+        border-radius:24px;
+
+    }
+
+    .research-input-header{
+
+        margin-bottom:2rem;
+
+    }
+
+    .research-input-title{
+
+        font-size:2.2rem;
+
+    }
+
+    .research-input-description{
+
+        font-size:.95rem;
+
+    }
+
+    .research-textarea{
+
+        min-height:140px;
+
+        font-size:.95rem;
+
+    }
+
+    .research-examples{
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+}
+
+
+/* 
+                    SMALL MOBILE
+ */
+
+@media (max-width:576px){
+
+    .research-input-section{
+
+        padding:70px 0 60px;
+
+    }
+
+    .research-input-wrapper{
+
+        padding:1.5rem 1rem;
+
+        border-radius:20px;
+
+    }
+
+    .research-input-badge{
+
+        font-size:.78rem;
+
+        padding:.5rem .8rem;
+
+    }
+
+    .research-input-title{
+
+        font-size:1.9rem;
+
+    }
+
+    .research-input-description{
+
+        font-size:.9rem;
+
+        line-height:1.7;
+
+    }
+
+    .research-textarea-wrapper{
+
+        padding:.8rem;
+
+        border-radius:16px;
+
+    }
+
+    .research-textarea{
+
+        min-height:130px;
+
+        padding-left:2.5rem;
+
+    }
+
+    .research-input-icon{
+
+        left:1rem;
+
+        top:1rem;
+
+    }
+
+    .research-input-hint{
+
+        padding-left:2.5rem;
+
+    }
+
+    .research-submit-btn{
+
+        padding:.9rem 1rem;
+
+        border-radius:14px;
+
+    }
+
+    .example-query{
+
+        width:100%;
+
+        text-align:left;
+
+    }
+
+}

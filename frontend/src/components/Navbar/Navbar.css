@@ -1,0 +1,187 @@
+/* Navbar */
+
+.navbar-section{
+
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(15px);
+
+    background: rgba(255,255,255,.05);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+.nav-actions{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.navbar-wrapper{
+
+    height: 75px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+/* Logo */
+
+.logo h2{
+
+    margin: 0;
+
+    color:  var(--color-heading);
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+}
+
+.logo span{
+
+    color: var(--color-primary);
+
+}
+
+/* Menu */
+
+.nav-menu{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.nav-menu a{
+
+    color: var(--color-text);
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: var(--transition-normal);
+
+}
+
+.nav-menu a:hover{
+
+    color: var(--color-primary);
+
+}
+
+/* GitHub */
+
+.github-btn{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    padding: .7rem 1.4rem;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    background: var(--color-primary);
+
+    color: white;
+
+    transition: var(--transition-normal);
+
+}
+
+.github-btn:hover{
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-glow);
+
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .navbar-wrapper{
+
+        flex-direction: column;
+
+        height: auto;
+
+        gap: 1rem;
+
+        padding: 1rem 0;
+
+    }
+
+    .nav-menu{
+
+        gap: 1.2rem;
+
+    }
+
+}
+.theme-toggle{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.theme-toggle:hover{
+
+    background:var(--color-primary);
+
+    transform:rotate(180deg);
+
+}

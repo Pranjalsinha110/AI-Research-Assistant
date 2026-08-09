@@ -1,0 +1,1584 @@
+/* =========================================================
+   HOW IT WORKS
+   Uses ONLY variables from variable.css
+========================================================= */
+
+.how-it-works-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 110px 0;
+
+    background: var(--color-background);
+    color: var(--color-text);
+
+    transition:
+        background var(--transition-normal),
+        color var(--transition-normal);
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.how-it-works-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -180px;
+    left: -180px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(37, 99, 235, 0.12),
+        transparent 70%
+    );
+
+    pointer-events: none;
+
+    animation: howGlowOne 9s ease-in-out infinite;
+}
+
+
+.how-it-works-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -170px;
+    bottom: -170px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(124, 58, 237, 0.10),
+        transparent 70%
+    );
+
+    pointer-events: none;
+
+    animation: howGlowTwo 10s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.how-it-works-header {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+/* Badge */
+
+.how-it-works-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-sm);
+
+    padding: var(--space-sm) var(--space-lg);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-round);
+
+    background: var(--color-surface);
+
+    color: var(--color-primary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    font-weight: var(--fw-semibold);
+
+    transition:
+        background var(--transition-normal),
+        border-color var(--transition-normal),
+        color var(--transition-normal);
+
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+
+.how-it-works-badge i {
+    font-size: var(--fs-lg);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.how-it-works-title {
+    margin: var(--space-xl) 0 var(--space-md);
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        var(--fs-2xl),
+        4vw,
+        var(--fs-4xl)
+    );
+
+    line-height: 1.15;
+
+    font-weight: var(--fw-bold);
+
+    letter-spacing: -0.03em;
+
+    transition: color var(--transition-normal);
+}
+
+
+.how-it-works-title span {
+    display: inline-block;
+
+    margin-left: var(--space-sm);
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent),
+        var(--color-primary)
+    );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 4s linear infinite;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.how-it-works-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-md);
+
+    line-height: 1.8;
+
+    transition: color var(--transition-normal);
+}
+
+
+/* =========================================================
+   WORKFLOW CONTAINER
+========================================================= */
+
+.workflow-container {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: var(--space-xl);
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.workflow-line {
+    position: absolute;
+
+    top: 47px;
+
+    left: 10%;
+    right: 10%;
+
+    height: 2px;
+
+    background: var(--color-border);
+
+    overflow: hidden;
+
+    transition: background var(--transition-normal);
+}
+
+
+.workflow-line::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -30%;
+
+    width: 30%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+
+    animation: lineFlow 3s linear infinite;
+}
+
+
+/* =========================================================
+   WORKFLOW STEP
+========================================================= */
+
+.workflow-step {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 0;
+
+    text-align: center;
+
+    animation: stepReveal 0.8s ease both;
+}
+
+
+.workflow-step:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+
+.workflow-step:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+
+.workflow-step:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+
+.workflow-step:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+
+/* =========================================================
+   STEP NUMBER
+========================================================= */
+
+.workflow-number {
+    position: absolute;
+
+    top: -12px;
+
+    right: 18%;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-round);
+
+    background: var(--color-background);
+
+    color: var(--color-primary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--fw-bold);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        background var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+
+/* =========================================================
+   WORKFLOW ICON
+========================================================= */
+
+.workflow-icon {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 94px;
+    height: 94px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+    background: var(--color-surface);
+
+    color: var(--color-primary);
+
+    box-shadow: var(--shadow-md);
+
+    transition:
+        transform var(--transition-slow),
+        box-shadow var(--transition-slow),
+        border-color var(--transition-normal),
+        background var(--transition-normal),
+        color var(--transition-normal);
+}
+
+
+.workflow-icon::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -7px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+
+.workflow-icon i {
+    position: relative;
+    z-index: 2;
+
+    font-size: 2.15rem;
+
+    transition: transform var(--transition-normal);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.workflow-content {
+    width: 100%;
+
+    max-width: 250px;
+
+    margin-top: var(--space-xl);
+}
+
+
+.workflow-step-label {
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
+
+    color: var(--color-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-xs);
+
+    font-weight: var(--fw-bold);
+
+    letter-spacing: 0.13em;
+}
+
+
+.workflow-content h3 {
+    margin: 0 0 var(--space-sm);
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-lg);
+
+    font-weight: var(--fw-semibold);
+
+    transition:
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+
+.workflow-content p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+
+    transition: color var(--transition-normal);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.workflow-arrow {
+    position: absolute;
+
+    top: 35px;
+
+    right: -20px;
+
+    z-index: 6;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-round);
+
+    background: var(--color-surface);
+
+    color: var(--color-primary);
+
+    animation: arrowMove 2s ease-in-out infinite;
+
+    transition:
+        background var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+
+.workflow-arrow i {
+    font-size: var(--fs-lg);
+}
+
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.workflow-step:hover .workflow-icon {
+    transform:
+        translateY(-10px)
+        rotate(-2deg);
+
+    border-color: var(--color-primary);
+
+    box-shadow: var(--shadow-glow);
+}
+
+
+.workflow-step:hover .workflow-icon::before {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+.workflow-step:hover .workflow-icon i {
+    transform:
+        scale(1.12)
+        rotate(4deg);
+}
+
+
+.workflow-step:hover .workflow-number {
+    transform: scale(1.1);
+
+    background: var(--color-primary);
+
+    color: #ffffff;
+
+    border-color: var(--color-primary);
+}
+
+
+.workflow-step:hover .workflow-content h3 {
+    color: var(--color-primary);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes stepReveal {
+
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes lineFlow {
+
+    0% {
+        left: -30%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+@keyframes arrowMove {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: translateX(6px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(37, 99, 235, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 7px rgba(37, 99, 235, 0.05);
+    }
+}
+
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+@keyframes howGlowOne {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 20px);
+    }
+}
+
+
+@keyframes howGlowTwo {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-25px, -20px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .how-it-works-section {
+        padding: 90px 0;
+    }
+
+    .workflow-container {
+        gap: var(--space-lg);
+    }
+
+    .workflow-icon {
+        width: 84px;
+        height: 84px;
+    }
+
+    .workflow-icon i {
+        font-size: 2rem;
+    }
+
+    .workflow-content {
+        max-width: 220px;
+    }
+
+    .workflow-content h3 {
+        font-size: var(--fs-md);
+    }
+
+    .workflow-content p {
+        font-size: var(--fs-xs);
+    }
+
+    .workflow-arrow {
+        right: -18px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .how-it-works-header {
+        margin-bottom: 60px;
+    }
+
+    .workflow-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        row-gap: var(--space-4xl);
+
+        column-gap: var(--space-2xl);
+    }
+
+    .workflow-line {
+        display: none;
+    }
+
+    .workflow-arrow {
+        display: none;
+    }
+
+    .workflow-number {
+        right: 25%;
+    }
+
+    .workflow-content {
+        max-width: 280px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .how-it-works-section {
+        padding: 75px 0;
+    }
+
+    .how-it-works-header {
+        margin-bottom: var(--space-3xl);
+
+        padding: 0 var(--space-sm);
+    }
+
+    .how-it-works-badge {
+        padding: 7px var(--space-md);
+
+        font-size: var(--fs-xs);
+    }
+
+    .how-it-works-title {
+        font-size: var(--fs-2xl);
+
+        line-height: 1.2;
+    }
+
+    .how-it-works-title span {
+        display: block;
+
+        margin: var(--space-xs) 0 0;
+    }
+
+    .how-it-works-description {
+        font-size: var(--fs-sm);
+
+        line-height: 1.7;
+    }
+
+    .workflow-container {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: var(--space-3xl);
+    }
+
+    .workflow-step {
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+    .workflow-icon {
+        width: 86px;
+        height: 86px;
+    }
+
+    .workflow-icon i {
+        font-size: 2rem;
+    }
+
+    .workflow-number {
+        top: -10px;
+
+        right: calc(50% - 70px);
+
+        width: 28px;
+        height: 28px;
+    }
+
+    .workflow-content {
+        max-width: 310px;
+
+        margin-top: var(--space-lg);
+    }
+
+    .workflow-content h3 {
+        font-size: var(--fs-md);
+    }
+
+    .workflow-content p {
+        font-size: var(--fs-sm);
+
+        line-height: 1.65;
+    }
+
+    .workflow-arrow {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .how-it-works-section {
+        padding: var(--space-4xl) 0;
+    }
+
+    .how-it-works-title {
+        font-size: 1.75rem;
+    }
+
+    .how-it-works-description {
+        font-size: var(--fs-xs);
+    }
+
+    .workflow-icon {
+        width: 78px;
+        height: 78px;
+    }
+
+    .workflow-icon i {
+        font-size: 1.8rem;
+    }
+
+    .workflow-content {
+        max-width: 285px;
+    }
+
+    .workflow-content h3 {
+        font-size: var(--fs-sm);
+    }
+
+    .workflow-content p {
+        font-size: var(--fs-xs);
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .how-it-works-section *,
+    .how-it-works-section::before,
+    .how-it-works-section::after {
+        animation: none !important;
+
+        transition: none !important;
+    }
+}
+/* =========================================================
+   HOW IT WORKS
+   Theme-aware + Animated + Responsive
+   Uses only existing variables from variable.css
+========================================================= */
+
+.how-it-works-section {
+    position: relative;
+    width: 100%;
+    padding: var(--space-4xl) 0;
+    
+    /* IMPORTANT:
+       Section apna separate background nahi banayega.
+       Body/global theme ka background visible rahega.
+    */
+    background: transparent;
+
+    color: var(--color-text);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND AMBIENT EFFECTS
+========================================================= */
+
+.how-it-works-section::before,
+.how-it-works-section::after {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(90px);
+
+    opacity: 0.16;
+
+    z-index: 0;
+
+    animation: howWorksFloat 8s ease-in-out infinite;
+}
+
+.how-it-works-section::before {
+    top: 5%;
+    left: -180px;
+
+    background: var(--color-primary);
+}
+
+.how-it-works-section::after {
+    right: -180px;
+    bottom: 5%;
+
+    background: var(--color-secondary);
+
+    animation-delay: -4s;
+}
+
+
+/* =========================================================
+   KEEP CONTENT ABOVE BACKGROUND
+========================================================= */
+
+.how-it-works-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.how-it-works-header {
+    max-width: 760px;
+
+    margin: 0 auto var(--space-4xl);
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Badge */
+
+.how-it-works-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-sm);
+
+    padding: var(--space-sm) var(--space-lg);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-round);
+
+    background: var(--color-surface);
+
+    color: var(--color-text);
+
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.how-it-works-badge i {
+    color: var(--color-accent);
+
+    font-size: var(--fs-lg);
+}
+
+
+/* Badge hover */
+
+.how-it-works-badge:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--color-primary);
+
+    box-shadow: var(--shadow-glow);
+}
+
+
+/* Title */
+
+.how-it-works-title {
+    margin: var(--space-xl) 0 var(--space-md);
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        var(--fs-3xl)
+    );
+
+    font-weight: var(--fw-bold);
+
+    line-height: 1.15;
+
+    color: var(--color-text);
+}
+
+.how-it-works-title span {
+    color: var(--color-primary);
+
+    position: relative;
+}
+
+
+/* Animated underline */
+
+.how-it-works-title span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 3px;
+
+    border-radius: var(--radius-round);
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent)
+    );
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    animation: titleUnderline 2s ease forwards;
+}
+
+
+/* Description */
+
+.how-it-works-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-md);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   STEPS GRID
+========================================================= */
+
+.how-it-works-grid {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: var(--space-xl);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.how-it-works-grid::before {
+    content: "";
+
+    position: absolute;
+
+    top: 72px;
+
+    left: 10%;
+    right: 10%;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent),
+        transparent
+    );
+
+    opacity: 0.45;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   STEP CARD
+========================================================= */
+
+.how-it-works-card {
+    position: relative;
+
+    padding: var(--space-2xl) var(--space-xl);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    /*
+       IMPORTANT:
+       Theme automatically changes this value.
+    */
+    background: var(--color-surface);
+
+    backdrop-filter: blur(16px);
+
+    box-shadow: var(--shadow-md);
+
+    text-align: center;
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal),
+        background var(--transition-normal);
+
+    animation: cardReveal 0.8s ease both;
+}
+
+
+/* Staggered animation */
+
+.how-it-works-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.how-it-works-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.how-it-works-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.how-it-works-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* Hover */
+
+.how-it-works-card:hover {
+    transform: translateY(-10px);
+
+    border-color: var(--color-primary);
+
+    box-shadow:
+        var(--shadow-lg),
+        0 0 30px rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================================================
+   STEP NUMBER
+========================================================= */
+
+.how-it-works-number {
+    position: absolute;
+
+    top: var(--space-md);
+    right: var(--space-md);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-sm);
+
+    font-weight: var(--fw-bold);
+
+    color: var(--color-text-muted);
+
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.how-it-works-icon {
+    position: relative;
+
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto var(--space-xl);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-primary);
+
+    font-size: 30px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+/* Icon glow */
+
+.how-it-works-icon::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -6px;
+
+    border-radius: inherit;
+
+    border: 1px solid var(--color-primary);
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+
+/* Icon hover */
+
+.how-it-works-card:hover .how-it-works-icon {
+    transform: translateY(-5px) rotate(3deg);
+
+    color: var(--color-accent);
+
+    border-color: var(--color-primary);
+
+    box-shadow: var(--shadow-glow);
+}
+
+.how-it-works-card:hover .how-it-works-icon::before {
+    opacity: 0.35;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.how-it-works-card h3 {
+    margin: 0 0 var(--space-md);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-lg);
+
+    font-weight: var(--fw-semibold);
+
+    color: var(--color-text);
+}
+
+
+.how-it-works-card p {
+    margin: 0;
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-sm);
+
+    line-height: 1.7;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.how-it-works-arrow {
+    position: absolute;
+
+    top: 62px;
+    right: -20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-round);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-primary);
+
+    font-size: var(--fs-lg);
+
+    z-index: 5;
+
+    transition:
+        transform var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+
+.how-it-works-card:hover .how-it-works-arrow {
+    transform: translateX(5px);
+
+    color: var(--color-accent);
+
+    border-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   LIGHT MODE EXTRA POLISH
+   No variable.css modification needed.
+========================================================= */
+
+[data-theme="light"] .how-it-works-card {
+    backdrop-filter: blur(14px);
+
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .how-it-works-grid::before {
+    opacity: 0.25;
+}
+
+[data-theme="light"] .how-it-works-section::before,
+[data-theme="light"] .how-it-works-section::after {
+    opacity: 0.08;
+}
+
+
+/* =========================================================
+   DARK MODE
+   Uses existing dark variables.
+========================================================= */
+
+[data-theme="dark"] .how-it-works-section {
+    background: transparent;
+}
+
+[data-theme="dark"] .how-it-works-card {
+    background: var(--color-surface);
+
+    border-color: var(--color-border);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes cardReveal {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes titleUnderline {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes howWorksFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(25px, -20px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .how-it-works-section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: var(--space-xl);
+    }
+
+    .how-it-works-grid::before {
+        display: none;
+    }
+
+    .how-it-works-arrow {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .how-it-works-section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .how-it-works-header {
+        margin-bottom: var(--space-3xl);
+    }
+
+    .how-it-works-title {
+        font-size: var(--fs-2xl);
+    }
+
+    .how-it-works-description {
+        font-size: var(--fs-sm);
+
+        line-height: 1.7;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-lg);
+    }
+
+    .how-it-works-card {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .how-it-works-icon {
+        width: 64px;
+        height: 64px;
+
+        font-size: 26px;
+    }
+
+    .how-it-works-number {
+        top: var(--space-sm);
+        right: var(--space-sm);
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .how-it-works-section::before,
+    .how-it-works-section::after,
+    .how-it-works-card,
+    .how-it-works-title span::after {
+        animation: none;
+    }
+
+    .how-it-works-card,
+    .how-it-works-icon,
+    .how-it-works-arrow {
+        transition: none;
+    }
+}   
