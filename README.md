@@ -9,7 +9,7 @@ The application is built using **React, FastAPI, LangGraph, LangChain, and Groq*
 ## 🚀 Live Project
 
 ### 🌐 Frontend
-[Live Demo]  ai-research-assistant-red-zeta.vercel.app
+[Live Demo]  https://ai-research-assistant-red-zeta.vercel.app
 
 ---
 
