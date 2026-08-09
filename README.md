@@ -9,12 +9,7 @@ The application is built using **React, FastAPI, LangGraph, LangChain, and Groq*
 ## 🚀 Live Project
 
 ### 🌐 Frontend
-[Live Demo](YOUR_VERCEL_URL)
-
-### ⚙️ Backend API
-[Backend API](YOUR_RENDER_URL)
-
-> Replace `YOUR_VERCEL_URL` and `YOUR_RENDER_URL` with your actual deployed URLs.
+[Live Demo]  ai-research-assistant-red-zeta.vercel.app
 
 ---
 
@@ -62,10 +57,10 @@ A user enters a research topic and the system automatically processes it through
                  ┌─────────────────────────────┐
                  │  Information Collector      │
                  │                             │
-                 │  ┌────────┐ ┌───────────┐  │
-                 │  │Web     │ │ Wikipedia │  │
-                 │  │Search  │ │           │  │
-                 │  └────────┘ └───────────┘  │
+                 │  ┌────────┐ ┌───────────┐   │
+                 │  │Web     │ │ Wikipedia │   │
+                 │  │Search  │ │           │   │
+                 │  └────────┘ └───────────┘   │
                  │         ┌────────┐          │
                  │         │ ArXiv  │          │
                  │         └────────┘          │
@@ -74,8 +69,8 @@ A user enters a research topic and the system automatically processes it through
                                 ▼
                     ┌──────────────────────┐
                     │   Fact Checker       │
-                    │  Validates Collected  │
-                    │      Information      │
+                    │  Validates Collected │
+                    │      Information     │
                     └──────────┬───────────┘
                                │
                                ▼
@@ -277,8 +272,8 @@ The application is divided into two major parts:
           │          ┌──────┼──────┐          │
           │          ▼      ▼      ▼          │
           │        Web    Wiki   ArXiv        │
-          │                                     │
-          └──────────────► Groq ◄──────────────┘
+          │                                   │
+          └──────────────► Groq ◄─────────────┘
 ```
 
 ---
