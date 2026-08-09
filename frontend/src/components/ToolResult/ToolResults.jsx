@@ -24,7 +24,7 @@ const ToolResults = ({ toolResults = null }) => {
             id: "arxiv",
             icon: "bx-file",
             title: "ArXiv",
-            result: toolResults?.arxiv_result?.map((paper)=>paper.summary[0])
+            result: toolResults?.arxiv_result?.map((paper)=>paper.summary)
         }
 
     ];
