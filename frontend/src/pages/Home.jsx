@@ -19,8 +19,12 @@ const Home = () => {
         }catch(error){
             console.error(
                 "researh request failed : ",
-                error
-            );
+                    error);
+            
+                 alert(
+            "⚠️ Agent Limit Reached\n\n" +
+            "Too many requests have been made. Please try again later."
+                )
 
             throw error;
         }
