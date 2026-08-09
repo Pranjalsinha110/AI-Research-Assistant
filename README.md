@@ -40,12 +40,12 @@ Final Research Report
 
 ## 🚀 Getting Started
 
-### 1. Clone
-### 2. Backend Setup
-### 3. Environment Variables
-### 4. Run Backend
-### 5. Frontend Setup
-### 6. Run Frontend
+ `1. Clone
+ 2. Backend Setup
+ 3. Environment Variables
+ 4. Run Backend
+ 5. Frontend Setup
+ 6. Run Frontend`
 
 ## 🔐 Environment Variables
 
