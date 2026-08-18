@@ -37,7 +37,7 @@ return await response.json();
 
 
 // for document DOCX download
-export const downloadResearchDocx  = async (final_report_with_citation)=>{
+export const downloadResearchDocx  = async (final_report)=>{
 
     const response = await fetch(
         `${API_URL}/api/generate_docx`,
@@ -48,7 +48,7 @@ export const downloadResearchDocx  = async (final_report_with_citation)=>{
                 "Content-Type" : "application/json",
             },
             body: JSON.stringify({
-                final_report_with_citation  : final_report_with_citation,
+                final_report  : final_report,
             })
         }
   );

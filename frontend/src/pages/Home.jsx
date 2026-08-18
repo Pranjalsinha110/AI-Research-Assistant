@@ -42,7 +42,7 @@ const Home = () => {
 
           <ToolResults toolResults = {researchData?.tools}/>
 
-         <ReportPreview  report={researchData?.final_report_with_citation}/>
+         <ReportPreview  report={researchData?.final_report}/>
 
             <HowItWorks/>
 
