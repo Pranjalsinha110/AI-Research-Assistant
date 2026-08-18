@@ -43,7 +43,7 @@ def document_generator(state: ResearchState) -> dict:
     formatted DOCX document stored inside a BytesIO buffer.
     """
 
-    report = state["final_report_with_citation"]
+    report = state["final_report"]
 
     document = Document()
 

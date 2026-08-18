@@ -7,7 +7,7 @@ from agents.information_collector import information_collector
 from agents.fact_checker_agent import fact_checker_agent
 from agents.knowledge_synthesizer_agent import knowledge_synthesizer_agent
 from agents.report_writer_agent import report_writer_agent
-from agents.citation_agent import citation_agent
+#from agents.citation_agent import citation_agent
 
 graph = StateGraph(ResearchState)
 

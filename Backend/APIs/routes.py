@@ -47,7 +47,7 @@ def generate_report(request: Requestschema):
 
 
         "final_report" :result["final_report"],
-        "final_report_with_citation" : result["final_report_with_citation"]
+        # "final_report_with_citation" : result["final_report_with_citation"]
     }
  except Exception as e:
         raise HTTPException(
@@ -61,7 +61,8 @@ def generate_docs(request:Documentrequest):
     try:
         document = document_generator(
             {
-                "final_report_with_citation": request.final_report_with_citation
+                # "final_report_with_citation": request.final_report_with_citation
+                "final_report": request.final_report
             }
         )
         buffer = document["docx_buffer"]

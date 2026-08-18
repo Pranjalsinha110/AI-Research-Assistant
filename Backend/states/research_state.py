@@ -49,6 +49,6 @@ class ResearchState(TypedDict):
 
     #citation
     source : list[dict[str,Any]]
-    final_report_with_citation : str
+   # final_report_with_citation : str
 
 
