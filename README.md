@@ -107,7 +107,7 @@ A user enters a research topic and the system automatically processes it through
                                     │
                                     ▼
                          ┌──────────────────────┐
-                         │   🧠 PLANNER AGENT   │
+                         │  🧠 PLANNER AGENT    │
                          │  Creates Research    │
                          │        Plan          │
                          └──────────┬───────────┘
@@ -116,10 +116,10 @@ A user enters a research topic and the system automatically processes it through
                   ┌─────────────────────────────────┐
                   │     🔎 INFORMATION COLLECTOR    │
                   │                                 │
-                  │   ┌────────┐ ┌────────────┐    │
-                  │   │  WEB   │ │ WIKIPEDIA  │    │
-                  │   │ SEARCH  │ │            │    │
-                  │   └────────┘ └────────────┘    │
+                  │   ┌────────┐ ┌────────────┐     │
+                  │   │  WEB   │ │ WIKIPEDIA  │     │
+                  │   │ SEARCH │ │            │     │
+                  │   └────────┘ └────────────┘     │
                   │          ┌────────┐             │
                   │          │ ARXIV  │             │
                   │          └────────┘             │
@@ -127,7 +127,7 @@ A user enters a research topic and the system automatically processes it through
                                   │
                                   ▼
                          ┌──────────────────────┐
-                         │   ✅ FACT CHECKER    │
+                         │   ✅ FACT CHECKER   │
                          │  Validates Collected │
                          │      Information     │
                          └──────────┬───────────┘
@@ -304,7 +304,7 @@ The application is divided into two major parts:
 
 ```text
                          ┌─────────────────────┐
-                         │    ⚛️ React Frontend │
+                         │  ⚛️ React Frontend  │
                          │                     │
                          │  User Interface     │
                          │  Research Input     │
@@ -316,7 +316,7 @@ The application is divided into two major parts:
                                     │ HTTP / REST API
                                     ▼
                          ┌─────────────────────┐
-                         │   ⚡ FastAPI Backend │
+                         │ ⚡ FastAPI Backend │
                          │                     │
                          │    API Routes       │
                          └──────────┬──────────┘
@@ -334,7 +334,7 @@ The application is divided into two major parts:
                        │       ┌────┼────┐        │
                        │       ▼    ▼    ▼        │
                        │     Web  Wiki  ArXiv     │
-                       │                        │
+                       │                          │
                        └──────────► ⚡ Groq ◄────┘
 ```
 
@@ -802,7 +802,7 @@ The application is deployed as two separate services.
                                   │
                          ┌────────┴────────┐
                          ▼                 ▼
-                      ▲ Vercel          🚀 Render
+                       Vercel          🚀 Render
                          │                 │
                          ▼                 ▼
                   ⚛️ React Frontend   ⚡ FastAPI Backend
