@@ -1,3 +1,45 @@
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C2FF,50:7C3AED,100:00E5FF&height=220&section=header&text=AI%20Research%20Assistant&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Multi-Agent%20Intelligent%20Research%20System&descAlignY=58&descSize=18" width="100%" />
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=21&duration=3000&pause=900&color=00C2FF&center=true&vCenter=true&width=850&lines=Multi-Agent+AI+Research+Assistant;Automated+Research+Planning;Multi-Source+Information+Collection;Fact-Checking+%26+Knowledge+Synthesis;AI-Powered+Research+Reports;Citations+%26+References;Powered+by+LangGraph+%2B+LangChain+%2B+Groq" alt="Typing SVG" />
+
+</div>
+
+<br/>
+
+<a href="https://ai-research-assistant-red-zeta.vercel.app">
+<img src="https://img.shields.io/badge/%F0%9F%9A%80_LIVE_DEMO-00C2FF?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
+
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/LangGraph-Agentic_AI-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Groq-LLM-F55036?style=for-the-badge" />
+
+<br/>
+
+<img src="https://img.shields.io/badge/LangChain-LLM%20Framework-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/ArXiv-Research-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" />
+<img src="https://img.shields.io/badge/Vercel-Frontend-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+<img src="https://img.shields.io/badge/Render-Backend-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+
+<br/><br/>
+
+**Research smarter. Verify deeper. Synthesize faster.**
+
+</div>
+
+---
+
+<div align="center">
+
+### ✨ From a single research question to a structured, cited report — automatically.
+
+</div>
+
 # 🤖 Multi-Agent AI Research Assistant
 
 An intelligent **multi-agent research system** that takes a research topic from the user, automatically creates a research plan, gathers information from multiple sources, fact-checks the collected information, synthesizes the findings, generates a structured research report, and adds citations and references.
@@ -9,29 +51,46 @@ The application is built using **React, FastAPI, LangGraph, LangChain, and Groq*
 ## 🚀 Live Project
 
 ### 🌐 Frontend
-[Live Demo]  https://ai-research-assistant-red-zeta.vercel.app
+
+<a href="https://ai-research-assistant-red-zeta.vercel.app">
+<img src="https://img.shields.io/badge/🌐_Live_Demo-Open_Project-00C2FF?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
+
+https://ai-research-assistant-red-zeta.vercel.app
+
+---
+
+<div align="center">
+
+|     🧠 Core    |     🔎 Research     |   🏗️ Engineering   | 🚀 Delivery |
+| :------------: | :-----------------: | :-----------------: | :---------: |
+| Multi-Agent AI |    Research Tools   | System Architecture |  Deployment |
+|    LangGraph   |    Fact Checking    |      Tech Stack     | Local Setup |
+|    LangChain   | Knowledge Synthesis |         API         | DOCX Export |
+
+</div>
 
 ---
 
 # ✨ Features
 
-- 🤖 Multi-agent AI research workflow
-- 🧠 Automatic research planning
-- 🔎 Multi-source information collection
-- 🌐 Web Search integration
-- 📚 Wikipedia integration
-- 📄 ArXiv research paper search
-- ✅ Fact-checking of collected information
-- 🧩 Knowledge synthesis
-- 📝 Automated research report generation
-- 🔖 Citation and reference generation
-- 📄 DOCX research report generation
-- 🎨 Responsive modern UI
-- 🌙 Dark / Light theme support
-- 📊 Visual research workflow
-- ⚡ LangGraph-powered agent orchestration
-- 🔐 Environment-variable based API configuration
-- 🚨 Frontend error handling for unavailable AI services
+* 🤖 Multi-agent AI research workflow
+* 🧠 Automatic research planning
+* 🔎 Multi-source information collection
+* 🌐 Web Search integration
+* 📚 Wikipedia integration
+* 📄 ArXiv research paper search
+* ✅ Fact-checking of collected information
+* 🧩 Knowledge synthesis
+* 📝 Automated research report generation
+* 🔖 Citation and reference generation
+* 📄 DOCX research report generation
+* 🎨 Responsive modern UI
+* 🌙 Dark / Light theme support
+* 📊 Visual research workflow
+* ⚡ LangGraph-powered agent orchestration
+* 🔐 Environment-variable based API configuration
+* 🚨 Frontend error handling for unavailable AI services
 
 ---
 
@@ -42,81 +101,84 @@ The application uses a sequential multi-agent architecture.
 A user enters a research topic and the system automatically processes it through multiple specialized agents.
 
 ```text
-                    ┌──────────────────────┐
-                    │      User Query      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │    Planner Agent     │
-                    │  Creates Research    │
-                    │        Plan          │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                 ┌─────────────────────────────┐
-                 │  Information Collector      │
-                 │                             │
-                 │  ┌────────┐ ┌───────────┐   │
-                 │  │Web     │ │ Wikipedia │   │
-                 │  │Search  │ │           │   │
-                 │  └────────┘ └───────────┘   │
-                 │         ┌────────┐          │
-                 │         │ ArXiv  │          │
-                 │         └────────┘          │
-                 └──────────────┬──────────────┘
-                                │
-                                ▼
-                    ┌──────────────────────┐
-                    │   Fact Checker       │
-                    │  Validates Collected │
-                    │      Information     │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Knowledge Synthesizer│
-                    │ Combines Important   │
-                    │ Research Findings    │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │    Report Writer     │
-                    │ Generates Structured │
-                    │   Research Report    │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Citation Agent     │
-                    │ Adds Citations and   │
-                    │     References       │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Final Research     │
-                    │       Report         │
-                    └──────────────────────┘
+                         ┌──────────────────────┐
+                         │      👤 USER QUERY   │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   🧠 PLANNER AGENT   │
+                         │  Creates Research    │
+                         │        Plan          │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                  ┌─────────────────────────────────┐
+                  │     🔎 INFORMATION COLLECTOR    │
+                  │                                 │
+                  │   ┌────────┐ ┌────────────┐    │
+                  │   │  WEB   │ │ WIKIPEDIA  │    │
+                  │   │ SEARCH  │ │            │    │
+                  │   └────────┘ └────────────┘    │
+                  │          ┌────────┐             │
+                  │          │ ARXIV  │             │
+                  │          └────────┘             │
+                  └───────────────┬─────────────────┘
+                                  │
+                                  ▼
+                         ┌──────────────────────┐
+                         │   ✅ FACT CHECKER    │
+                         │  Validates Collected │
+                         │      Information     │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │ 🧩 KNOWLEDGE         │
+                         │    SYNTHESIZER       │
+                         │ Combines Important   │
+                         │   Research Findings  │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │    📝 REPORT WRITER  │
+                         │ Generates Structured │
+                         │   Research Report    │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   🔖 CITATION AGENT  │
+                         │ Adds Citations and   │
+                         │     References       │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   📄 FINAL RESEARCH  │
+                         │        REPORT        │
+                         └──────────────────────┘
 ```
+
+---
 
 The workflow is implemented with LangGraph using the following sequence:
 
 ```text
 START
   ↓
-Planner Agent
+🧠 Planner Agent
   ↓
-Information Collector
+🔎 Information Collector
   ↓
-Fact Checker
+✅ Fact Checker
   ↓
-Knowledge Synthesizer
+🧩 Knowledge Synthesizer
   ↓
-Report Writer
+📝 Report Writer
   ↓
-Citation Agent
+🔖 Citation Agent
   ↓
 END
 ```
@@ -127,7 +189,7 @@ END
 
 The project separates the research process into specialized agents.
 
-## 1. Planner Agent
+## 1. 🧠 Planner Agent
 
 The Planner Agent receives the user's research topic and creates a structured research plan.
 
@@ -154,11 +216,11 @@ This plan is then passed to the next stage of the workflow.
 
 ---
 
-## 2. Information Collector
+## 2. 🔎 Information Collector
 
 The Information Collector gathers information using multiple external research tools.
 
-### 🔎 Web Search
+### 🌐 Web Search
 
 Used to discover relevant information from the web and find recent developments.
 
@@ -174,7 +236,7 @@ The collected information is then passed to the fact-checking stage.
 
 ---
 
-## 3. Fact Checker Agent
+## 3. ✅ Fact Checker Agent
 
 The Fact Checker reviews the collected information and identifies important factual information that can be used in the final research.
 
@@ -182,7 +244,7 @@ The goal is to reduce irrelevant or unreliable information before the report-wri
 
 ---
 
-## 4. Knowledge Synthesizer Agent
+## 4. 🧩 Knowledge Synthesizer Agent
 
 The Knowledge Synthesizer combines the processed information into a more concise and meaningful research context.
 
@@ -190,7 +252,7 @@ Instead of sending every raw result directly to the final report generator, the 
 
 ---
 
-## 5. Report Writer Agent
+## 5. 📝 Report Writer Agent
 
 The Report Writer generates the main research report using the synthesized information.
 
@@ -198,7 +260,7 @@ The generated report is structured into a professional research format.
 
 ---
 
-## 6. Citation Agent
+## 6. 🔖 Citation Agent
 
 The Citation Agent processes the generated report and adds citations and references.
 
@@ -241,39 +303,39 @@ ArXiv results are especially useful when the research topic requires academic or
 The application is divided into two major parts:
 
 ```text
-                 ┌─────────────────────┐
-                 │    React Frontend   │
-                 │                     │
-                 │  User Interface     │
-                 │  Research Input     │
-                 │  Planner            │
-                 │  Tool Results       │
-                 │  Report Preview     │
-                 └──────────┬──────────┘
-                            │
-                            │ HTTP / REST API
-                            ▼
-                 ┌─────────────────────┐
-                 │    FastAPI Backend  │
-                 │                     │
-                 │    API Routes       │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │      LangGraph      │
-                 │  Agent Orchestration│
-                 └──────────┬──────────┘
-                            │
-          ┌─────────────────┼─────────────────┐
-          ▼                 ▼                 ▼
-       Agents             Tools             LLM
-          │                 │                 │
-          │          ┌──────┼──────┐          │
-          │          ▼      ▼      ▼          │
-          │        Web    Wiki   ArXiv        │
-          │                                   │
-          └──────────────► Groq ◄─────────────┘
+                         ┌─────────────────────┐
+                         │    ⚛️ React Frontend │
+                         │                     │
+                         │  User Interface     │
+                         │  Research Input     │
+                         │  Planner            │
+                         │  Tool Results       │
+                         │  Report Preview     │
+                         └──────────┬──────────┘
+                                    │
+                                    │ HTTP / REST API
+                                    ▼
+                         ┌─────────────────────┐
+                         │   ⚡ FastAPI Backend │
+                         │                     │
+                         │    API Routes       │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │      🧩 LangGraph   │
+                         │  Agent Orchestration│
+                         └──────────┬──────────┘
+                                    │
+                       ┌────────────┼────────────┐
+                       ▼            ▼            ▼
+                    Agents        Tools          LLM
+                       │            │             │
+                       │       ┌────┼────┐        │
+                       │       ▼    ▼    ▼        │
+                       │     Web  Wiki  ArXiv     │
+                       │                        │
+                       └──────────► ⚡ Groq ◄────┘
 ```
 
 ---
@@ -282,57 +344,57 @@ The application is divided into two major parts:
 
 ## Frontend
 
-- React
-- JavaScript
-- Axios
-- React Markdown
-- React Bootstrap
-- Bootstrap
-- Framer Motion
-- React Toastify
-- Boxicons
-- CSS
-- Responsive design
+* React
+* JavaScript
+* Axios
+* React Markdown
+* React Bootstrap
+* Bootstrap
+* Framer Motion
+* React Toastify
+* Boxicons
+* CSS
+* Responsive design
 
-The frontend package currently includes React 19, Axios, Framer Motion, React Markdown, React Bootstrap, React Toastify and other supporting packages. 
+The frontend package currently includes React 19, Axios, Framer Motion, React Markdown, React Bootstrap, React Toastify and other supporting packages.
 
 ---
 
 ## Backend
 
-- Python
-- FastAPI
-- Uvicorn
-- Pydantic
-- python-dotenv
-- python-docx
+* Python
+* FastAPI
+* Uvicorn
+* Pydantic
+* python-dotenv
+* python-docx
 
 ---
 
 ## AI / Agentic Layer
 
-- LangChain
-- LangChain Core
-- LangChain Community
-- LangChain Groq
-- LangGraph
-- Groq
+* LangChain
+* LangChain Core
+* LangChain Community
+* LangChain Groq
+* LangGraph
+* Groq
 
 ---
 
 ## Research Tools
 
-- DuckDuckGo Search
-- Wikipedia
-- ArXiv
+* DuckDuckGo Search
+* Wikipedia
+* ArXiv
 
 ---
 
 ## Observability
 
-- LangSmith
+* LangSmith
 
-The backend dependency configuration includes FastAPI, LangChain, LangGraph, Groq/LangChain-Groq, DuckDuckGo, Wikipedia, ArXiv, python-docx and LangSmith. 
+The backend dependency configuration includes FastAPI, LangChain, LangGraph, Groq/LangChain-Groq, DuckDuckGo, Wikipedia, ArXiv, python-docx and LangSmith.
 
 ---
 
@@ -441,7 +503,7 @@ The Planner Agent generates a series of research steps.
 ```text
 Research Topic
       ↓
-Planner Agent
+🧠 Planner Agent
       ↓
 Structured Research Plan
 ```
@@ -453,9 +515,9 @@ Structured Research Plan
 The system gathers information from:
 
 ```text
-Web Search
-Wikipedia
-ArXiv
+🌐 Web Search
+📚 Wikipedia
+📄 ArXiv
 ```
 
 ---
@@ -467,7 +529,7 @@ The collected information is processed by the Fact Checker Agent.
 ```text
 Collected Information
         ↓
-Fact Checker
+✅ Fact Checker
         ↓
 Verified / Relevant Information
 ```
@@ -496,10 +558,10 @@ The Citation Agent adds citations and references.
 
 The frontend receives:
 
-- Research plan
-- Tool results
-- Final report
-- Final report with citations
+* Research plan
+* Tool results
+* Final report
+* Final report with citations
 
 ---
 
@@ -555,7 +617,7 @@ wikipedia_result
 arxiv_result
 ```
 
-The backend schema defines these response structures explicitly. 
+The backend schema defines these response structures explicitly.
 
 ---
 
@@ -584,11 +646,11 @@ The workflow is:
 ```text
 Final Research Report
         ↓
-Citation Agent
+🔖 Citation Agent
         ↓
 Cited Research Report
         ↓
-Document Generator
+📄 Document Generator
         ↓
 DOCX File
 ```
@@ -736,14 +798,14 @@ For production, point the frontend to the deployed Render backend URL.
 The application is deployed as two separate services.
 
 ```text
-                 GitHub Repository
-                       │
-             ┌─────────┴─────────┐
-             ▼                   ▼
-          Vercel               Render
-             │                   │
-             ▼                   ▼
-        React Frontend      FastAPI Backend
+                         🐙 GitHub Repository
+                                  │
+                         ┌────────┴────────┐
+                         ▼                 ▼
+                      ▲ Vercel          🚀 Render
+                         │                 │
+                         ▼                 ▼
+                  ⚛️ React Frontend   ⚡ FastAPI Backend
 ```
 
 ### Frontend
@@ -800,15 +862,15 @@ The research workflow uses a shared research state managed through LangGraph.
 The state carries information between agents including:
 
 ```text
-User Query
-Research Plan
-Web Search Results
-Wikipedia Results
-ArXiv Results
-Fact-Checked Information
-Synthesized Knowledge
-Generated Report
-Citations
+👤 User Query
+🧠 Research Plan
+🌐 Web Search Results
+📚 Wikipedia Results
+📄 ArXiv Results
+✅ Fact-Checked Information
+🧩 Synthesized Knowledge
+📝 Generated Report
+🔖 Citations
 ```
 
 This allows each agent to work on a specific stage while passing the required information to the next stage.
@@ -836,19 +898,19 @@ Multi-Agent Approach
 
 User
  ↓
-Planner
+🧠 Planner
  ↓
-Research
+🔎 Research
  ↓
-Fact Checking
+✅ Fact Checking
  ↓
-Knowledge Synthesis
+🧩 Knowledge Synthesis
  ↓
-Report Writing
+📝 Report Writing
  ↓
-Citation
+🔖 Citation
  ↓
-Final Report
+📄 Final Report
 ```
 
 This separation makes the research workflow easier to understand, extend, debug, and maintain.
@@ -869,15 +931,15 @@ The backend exposes HTTP errors through FastAPI when an exception occurs during 
 
 The application can be used for research topics such as:
 
-- Generative AI
-- Artificial Intelligence
-- Machine Learning
-- Software Engineering
-- Emerging technologies
-- Academic research topics
-- Technology trends
-- Research paper discovery
-- Industry developments
+* Generative AI
+* Artificial Intelligence
+* Machine Learning
+* Software Engineering
+* Emerging technologies
+* Academic research topics
+* Technology trends
+* Research paper discovery
+* Industry developments
 
 ---
 
@@ -885,20 +947,20 @@ The application can be used for research topics such as:
 
 Possible future improvements include:
 
-- 🔄 Parallel execution of research tools
-- 🧠 More advanced source ranking
-- 📚 Support for additional academic databases
-- 🔍 Better source credibility scoring
-- 💾 Persistent research history
-- 👤 User authentication
-- 🗂️ Saved research projects
-- 📑 PDF report generation
-- 📊 Research analytics
-- 🔁 Automatic retry and model fallback
-- ⚡ Better token optimization
-- 🧪 Automated testing for agents and tools
-- 📈 Advanced LangSmith observability
-- 🧠 More sophisticated multi-agent routing
+* 🔄 Parallel execution of research tools
+* 🧠 More advanced source ranking
+* 📚 Support for additional academic databases
+* 🔍 Better source credibility scoring
+* 💾 Persistent research history
+* 👤 User authentication
+* 🗂️ Saved research projects
+* 📑 PDF report generation
+* 📊 Research analytics
+* 🔁 Automatic retry and model fallback
+* ⚡ Better token optimization
+* 🧪 Automated testing for agents and tools
+* 📈 Advanced LangSmith observability
+* 🧠 More sophisticated multi-agent routing
 
 ---
 
@@ -906,40 +968,40 @@ Possible future improvements include:
 
 This project was built to explore and demonstrate:
 
-- Agentic AI
-- Multi-agent systems
-- LangGraph workflows
-- LLM orchestration
-- Tool calling
-- AI-powered research automation
-- Information retrieval
-- Fact checking
-- Knowledge synthesis
-- Automated report generation
-- Citation generation
-- Full-stack AI application development
+* Agentic AI
+* Multi-agent systems
+* LangGraph workflows
+* LLM orchestration
+* Tool calling
+* AI-powered research automation
+* Information retrieval
+* Fact checking
+* Knowledge synthesis
+* Automated report generation
+* Citation generation
+* Full-stack AI application development
 
 ---
 
 # 📚 Main Technologies
 
-| Technology | Purpose |
-|---|---|
-| React | Frontend UI |
-| JavaScript | Frontend logic |
-| FastAPI | Backend API |
-| Python | Backend development |
-| LangGraph | Agent orchestration |
-| LangChain | LLM/tool integration |
-| Groq | LLM inference |
-| DuckDuckGo | Web search |
-| Wikipedia | Background research |
-| ArXiv | Academic research |
-| Pydantic | Data validation |
-| python-docx | DOCX generation |
-| LangSmith | LLM observability |
-| Vercel | Frontend deployment |
-| Render | Backend deployment |
+| Technology  | Purpose              |
+| ----------- | -------------------- |
+| React       | Frontend UI          |
+| JavaScript  | Frontend logic       |
+| FastAPI     | Backend API          |
+| Python      | Backend development  |
+| LangGraph   | Agent orchestration  |
+| LangChain   | LLM/tool integration |
+| Groq        | LLM inference        |
+| DuckDuckGo  | Web search           |
+| Wikipedia   | Background research  |
+| ArXiv       | Academic research    |
+| Pydantic    | Data validation      |
+| python-docx | DOCX generation      |
+| LangSmith   | LLM observability    |
+| Vercel      | Frontend deployment  |
+| Render      | Backend deployment   |
 
 ---
 
@@ -980,6 +1042,28 @@ GitHub:
 # ⭐ Support
 
 If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00E5FF,50:7C3AED,100:00C2FF&height=140&section=footer&animation=fadeIn" width="100%" />
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=900&color=00C2FF&center=true&vCenter=true&width=750&lines=Thanks+for+visiting+the+project!+%F0%9F%9A%80;Explore+%E2%80%A2+Research+%E2%80%A2+Learn+%E2%80%A2+Build+%F0%9F%A4%96;Star+%E2%AD%90+the+repository+if+you+find+it+useful!" alt="Footer animation" />
+
+<br/>
+
+### 🤖 Multi-Agent AI Research Assistant
+
+**Built for Agentic AI • Research Automation • Full-Stack AI Development**
+
+<br/>
+
+<a href="https://github.com/Pranjalsinha110/AI-Research-Assistant">
+<img src="https://img.shields.io/badge/⭐_Star_on_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+</div>
 
 ---
 
